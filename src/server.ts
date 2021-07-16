@@ -1,10 +1,11 @@
-import express from 'express';
-import { CategoriesRoutes } from './routes/Categories.Routes';
+import express from "express";
+
+import { router } from "./modules/cars/routes";
 
 const app = express();
 
 app.use(express.json());
 
-app.use('/categories', CategoriesRoutes);
+app.use(router);
 
-app.listen(3333, () => console.log('Servidor está rondando'));
+app.listen(5328, () => console.log("Servidor está rondando"));
